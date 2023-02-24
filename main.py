@@ -3,8 +3,8 @@ from lab import Lab
 
 
 def main():
+    pc = Lab()
     print("Name: \nId: \nComputer Lab Management Application\n")
-
     while True:
         print("\n1. Add a new PC")
         print("2. Update information of an existing PC")
@@ -16,8 +16,13 @@ def main():
         print("8. Quit")
         user_choice = input("\nEnter your choice: ")
         if user_choice == '1':
-            pc = Lab()
             pc.add_pc()
+
+        elif user_choice == '2':
+            pc.update_pc()
+
+        elif user_choice == '3':
+            pc.remove_pc()
 
         elif user_choice == '8':
             print("Application Terminated!")
